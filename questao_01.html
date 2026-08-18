@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMC do usuário</title>
+    <title>Calculadora de IMC</title>
 </head>
 <body>
-    <label>Altura: </label>
-    <input type="text" id="a"><br>
 
-    <label>Peso: </label>
-    <input type="text" id="p"><br>
+    <h1>Calculadora de IMC</h1>
 
-    <button onclick="enviar()">Enviar</button><br>
+    <label>Peso (kg):</label>
+    <input type="number" id="peso">
+
+    <br><br>
+
+    <label>Altura (m):</label>
+    <input type="number" id="altura" step="0.01">
+
+    <br><br>
+
+    <button onclick="calcularIMC()">Calcular IMC</button>
+
+    <p id="resultado"></p>
 
     <script>
-        function enviar(){
-            var a = document.getElementById("a").value;
-            var p = document.getElementById("p").value;
+        function calcularIMC() {
+            let peso = Number(document.getElementById("peso").value);
+            let altura = Number(document.getElementById("altura").value);
 
-            var imc = a / (a * a);
+            let imc = peso / (altura * altura);
 
-            alert("Seu imc é: " + imc)
+            let resultado = document.getElementById("resultado");
+
+            if (imc < 18.5) {
+                resultado.innerHTML = "IMC: " + imc.toFixed(2) + " - Abaixo do peso";
+                resultado.style.color = "blue";
+            } else if (imc < 25) {
+                resultado.innerHTML = "IMC: " + imc.toFixed(2) + " - Peso normal";
+                resultado.style.color = "green";
+            } else if (imc < 30) {
+                resultado.innerHTML = "IMC: " + imc.toFixed(2) + " - Sobrepeso";
+                resultado.style.color = "orange";
+            } else {
+                resultado.innerHTML = "IMC: " + imc.toFixed(2) + " - Obesidade";
+                resultado.style.color = "red";
+            }
         }
     </script>
 
