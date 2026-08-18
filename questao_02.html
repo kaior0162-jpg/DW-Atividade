@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Média do Aluno</title>
+</head>
+<body>
+
+    <h1>Média Final</h1>
+
+    <label>Nota 1:</label>
+    <input type="number" id="nota1">
+
+    <br><br>
+
+    <label>Nota 2:</label>
+    <input type="number" id="nota2">
+
+    <br><br>
+
+    <label>Nota 3:</label>
+    <input type="number" id="nota3">
+
+    <br><br>
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMedia() {
+            let nota1 = Number(document.getElementById("nota1").value);
+            let nota2 = Number(document.getElementById("nota2").value);
+            let nota3 = Number(document.getElementById("nota3").value);
+
+            let media = (nota1 + nota2 + nota3) / 3;
+
+            let resultado = document.getElementById("resultado");
+
+            if (media >= 7) {
+                resultado.innerHTML = "Média: " + media.toFixed(2) + " - Aprovado";
+                resultado.style.color = "green";
+            } else if (media >= 5) {
+                resultado.innerHTML = "Média: " + media.toFixed(2) + " - Recuperação";
+                resultado.style.color = "orange";
+            } else {
+                resultado.innerHTML = "Média: " + media.toFixed(2) + " - Reprovado";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
