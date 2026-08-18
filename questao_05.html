@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversão de Temperatura</title>
+</head>
+<body>
+
+    <h1>Conversor de Temperatura</h1>
+
+    <label>Temperatura em Celsius:</label>
+    <input type="number" id="celsius">
+
+    <br><br>
+
+    <button onclick="converter()">Converter</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function converter() {
+            let celsius = Number(document.getElementById("celsius").value);
+
+            let fahrenheit = (celsius * 9 / 5) + 32;
+
+            let resultado = document.getElementById("resultado");
+
+            if (celsius < 15) {
+                resultado.innerHTML =
+                    "Fahrenheit: " + fahrenheit.toFixed(2) +
+                    "°F<br>Temperatura baixa";
+                resultado.style.color = "blue";
+
+            } else if (celsius <= 30) {
+                resultado.innerHTML =
+                    "Fahrenheit: " + fahrenheit.toFixed(2) +
+                    "°F<br>Temperatura agradável";
+                resultado.style.color = "green";
+
+            } else {
+                resultado.innerHTML =
+                    "Fahrenheit: " + fahrenheit.toFixed(2) +
+                    "°F<br>Temperatura alta";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
