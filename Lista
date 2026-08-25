@@ -1,0 +1,59 @@
+function imprimir(){
+
+2
+
+//alert("Funcionou!");
+
+3
+
+var lista [];
+
+//Criação da lista Vazia
+
+4
+
+1ista.push(0);
+
+5
+
+lista.push(23);
+
+6
+
+1ista.push("Aoba!! Bão??");
+
+7
+
+1ista.push(23.28);
+
+8
+
+lista.push(1.23);
+
+9
+
+//lista.pop()//Exclui o ultimo elemento
+
+10
+
+//lista.shift();
+
+//Exclui o primeiro elemento
+
+11
+
+//lista.splice(1) //Exclui tudo a partir da posição 1
+
+12
+
+//lista.length
+
+//tamanho a lista
+
+13
+
+14
+
+alert(lista.length);
+
+//Imprimindo tamanho da lista
