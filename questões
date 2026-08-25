@@ -1,0 +1,34 @@
+Questão 01. Crie uma página com HTML e JS, com base nos arquivos das últimas aulas, que calcule o IMC de um usuário. O resultado da classificação deve aparecer acompanhado com cores diferentes.
+
+Questão 02. Crie uma página com HTML e JS que permita ao usuário informar as notas de três avaliações. O sistema deverá calcular e apresentar a média final do aluno.
+
+A situação do aluno deve ser apresentada conforme a média:
+
+Média maior ou igual a 7: Aprovado, em verde;
+Média entre 5 e 6,9: Recuperação, em amarelo;
+Média menor que 5: Reprovado, em vermelho.
+Questão 03. Crie uma página com HTML e JS que permita ao usuário informar o valor de um produto. O sistema deverá calcular o valor do desconto e o preço final de acordo com as seguintes regras:
+
+Valor até R$ 100,00: sem desconto;
+Valor acima de R$ 100,00 e até R$ 500,00: 10% de desconto;
+Valor acima de R$ 500,00: 15% de desconto.
+Apresente na página o valor original, o desconto aplicado e o valor final da compra. Utilize cores diferentes para cada faixa de desconto.
+
+Questão 04. Crie uma página com HTML e JS que permita ao usuário informar sua idade. O sistema deverá classificar o usuário em uma das seguintes categorias:
+
+0 a 12 anos: Criança;
+13 a 17 anos: Adolescente;
+18 a 59 anos: Adulto;
+60 anos ou mais: Idoso.
+A classificação deverá ser exibida na página utilizando uma cor diferente para cada categoria.
+
+Questão 05. Crie uma página com HTML e JavaScript que permita ao usuário informar uma temperatura em graus Celsius. O sistema deverá converter a temperatura para Fahrenheit utilizando a fórmula:
+
+F = (C × 9/5) + 32
+
+Após realizar a conversão, classifique a temperatura informada como:
+
+Abaixo de 15 °C: Temperatura baixa;
+De 15 °C a 30 °C: Temperatura agradável;
+Acima de 30 °C: Temperatura alta.
+O resultado da conversão e a classificação devem ser apresentados na página, utilizando cores diferentes para cada classificação.
