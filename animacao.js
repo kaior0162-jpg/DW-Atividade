@@ -61,6 +61,13 @@ function animar(){
     bola4.y+=bola4.velocidade;
     desenhar(bola4);
 
+    if (bola.x>canvas.width || bola.y>canvas.height){
+        bola.velocidade = bola.velocidade*-1
+
+    } else if(bola.x<0 || bola.y<0){
+        bola.velocidade = bola.velocidade*-1
+    }
+
     requestAnimationFrame(animar)
 }
 animar()
