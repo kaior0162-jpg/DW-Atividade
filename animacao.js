@@ -2,32 +2,32 @@ var canvas = document.getElementById("jogo");
 var contexto = canvas.getContext("2d");
 
 const bola ={
-    x : 200,
-    y : 200,
-    r : 50,
+    x : 50,
+    y : 50,
+    r : 10,
     cor : "red",
-    velocidade : 3
+    velocidade : 10
 };
 const bola2 ={
-    x : 350,
+    x : 750,
     y : 350,
-    r : 30,
+    r : 15,
     cor : "blue",
     velocidade : 1
 };
 const bola3 ={
-    x : 50,
-    y : 50,
-    r : 80,
-    cor : "orange",
-    velocidade : 0.55
+    x : 400,
+    y : 250,
+    r : 35,
+    cor : "black",
+    velocidade : 2
 };
 const bola4 ={
-    x : 150,
-    y : 260,
-    r : 9,
-    cor : "black",
-    velocidade : 0.07
+    x : 50,
+    y : 350,
+    r : 20,
+    cor : "green",
+    velocidade : 1
 };
 
 function desenhar(bola){
@@ -43,11 +43,11 @@ function animar(){
     contexto.clearRect(0,0, canvas.width, canvas.height);
 
     bola.x+=bola.velocidade;
-    bola.y-=bola.velocidade;
+  
     desenhar(bola);
 
     
-    bola2.x-=bola2.velocidade;
+   
     bola2.y-=bola2.velocidade;
     desenhar(bola2);
 
@@ -58,7 +58,7 @@ function animar(){
 
     
     bola4.x+=bola4.velocidade;
-    bola4.y+=bola4.velocidade;
+    
     desenhar(bola4);
 
     if (bola.x>canvas.width || bola.y>canvas.height){
@@ -66,6 +66,27 @@ function animar(){
 
     } else if(bola.x<0 || bola.y<0){
         bola.velocidade = bola.velocidade*-1
+    }
+
+    if (bola2.x>canvas.width || bola2.y>canvas.height){
+        bola2.velocidade = bola2.velocidade*-1
+
+    } else if(bola2.x<0 || bola2.y<0){
+        bola2.velocidade = bola2.velocidade*-1
+    }
+
+    if (bola3.x>canvas.width || bola3.y>canvas.height){
+        bola3.velocidade = bola3.velocidade*-1
+
+    } else if(bola3.x<0 || bola3.y<0){
+        bola3.velocidade = bola3.velocidade*-1
+    }
+
+    if (bola4.x>canvas.width || bola4.y>canvas.height){
+        bola4.velocidade = bola4.velocidade*-1
+
+    } else if(bola4.x<0 || bola4.y<0){
+        bola4.velocidade = bola4.velocidade*-1
     }
 
     requestAnimationFrame(animar)
